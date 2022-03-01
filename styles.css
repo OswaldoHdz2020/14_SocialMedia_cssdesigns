@@ -1,0 +1,92 @@
+* {
+	box-sizing: border-box;
+}
+body{
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+.container{
+    height: 70px;
+    width: 70px;
+    border: 1px solid #ffd900;
+    background-color: transparent;
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: .4s ease;
+}
+.container.open{
+    width: 350px;
+    box-shadow: 0px 0px 8px 0px #ffd900;
+}
+.container .open-btn{
+    height: 70px;
+    width: 70px;
+    background-color: #000;
+    color: #ffd900;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    border: 0;
+    border-radius: 50%;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    z-index: 100;
+}
+.container.open .open-btn{
+    display: none;
+}
+.container a{
+    height: 50px;
+    width: 50px;
+    background-color: #000;
+    border-radius: 50%;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    text-decoration: none;
+    opacity: 0;
+}
+.container.open a{
+    position: static;
+    opacity: 1;
+    transition: .4s ease;
+}
+.container a{
+    background-color: #ffd900;
+}
+.container a.youtube:hover,
+.container a.facebook:hover,
+.container a.whatsapp:hover,
+.container a.instagram:hover{
+    height: 60px;
+    width: 60px;
+    background-color: transparent;
+}
+.container a:hover .fab{
+    font-size: 42px;
+    color: #ffd900;
+    transition: .4s ease;
+}
+.container a.x{
+    background-color: #ffd900;
+}
+.container a i{
+    color: #000;
+}
